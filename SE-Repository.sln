@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29403.142
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SE-Lib", "SE-Lib.csproj", "{4A6AE90B-63C8-4FD9-8458-3B5533862A92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SE-Repository", "SE-Repository.csproj", "{4A6AE90B-63C8-4FD9-8458-3B5533862A92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
