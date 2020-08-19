@@ -25,21 +25,31 @@ namespace ScriptingClass
         //////////////////////////START//////////////////////////////////////////
         //=======================================================================================
 
-        void Main()
+        void Main(string RuntimeArguments, UpdateType RuntimeUpdateType)
         {
-            var outerair = GridTerminalSystem.GetBlockGroupWithName("OuterAirtightDoors") as IMyAirtightSlideDoor;
-            outerair.OpenDoor();
 
-            var sensors = GridTerminalSystem.GetBlockGroupWithName("AirlockSensor") as IMySensorBlock;
-
-            if (sensors.IsActive)
+            if (UpdateConditionTemplate())
             {
-                outerair.CloseDoor();
-
+                //do stuff that fits the updateconditions here
             }
 
 
-            
+
+
+
+            #region Helper Methods
+            bool UpdateConditionTemplate()
+            {
+                //the UpdateType has some special syntax for checking update type. saves some characters.
+                //add accepted updatetypes in the paranthesis with "|" between them, like so:
+                if ((RuntimeUpdateType & (UpdateType.Update1 | UpdateType.Update100 | UpdateType.Update10 | UpdateType.Terminal)) != 0)
+                {
+                    return true;
+                }
+                return false;
+
+            }
+            #endregion
         }
 
         //=======================================================================================

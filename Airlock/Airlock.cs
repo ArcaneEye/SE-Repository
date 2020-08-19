@@ -28,6 +28,8 @@ namespace Airlock
         //////////////////////////START//////////////////////////////////////////
         //=======================================================================================
 
+        //This script is supposed to facilitate a single room airlock with buttons for entry and exit.
+        //each airlock requires 2 buttons, 2 doors, a vent, a sensor set to look in the airlock room and optionally LCD's for outside, airlock and inside.
         void Main(string argument, UpdateType updateType)
         {
 
@@ -69,13 +71,15 @@ namespace Airlock
 
 
 
-
-
-            if ((updateType & (UpdateType.Update1 | UpdateType.Update100 | UpdateType.Update10)) != 0)
+            bool UpdateConditionTemplate()
             {
-                // The code you want to run when the given update types are called should be placed here
-            }
 
+                if ((updateType & ((UpdateType.Update1 | UpdateType.Update100 | UpdateType.Update10) & UpdateType.Terminal)) != 0)
+                {
+                    return true;
+                }
+                return false;
+            }
 
 
             var outerair = GridTerminalSystem.GetBlockGroupWithName("OuterAirtightDoors") as IMyAirtightSlideDoor;
