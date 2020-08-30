@@ -71,7 +71,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Airlock\Airlock.cs" />
+    <Compile Include="Airlock\01 - ProgrammableAsTimer.cs" />
+    <Compile Include="Airlock\99 - SingleRoomAirlock.cs" />
     <Compile Include="Template.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

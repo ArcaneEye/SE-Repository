@@ -1,0 +1,4 @@
+C:\Runes\LocalRepo\SE-Repository\obj\Debug\SE-Repository.csprojAssemblyReference.cache
+C:\Runes\LocalRepo\SE-Repository\obj\Debug\SE-Repository.csproj.CoreCompileInputs.cache
+C:\Runes\LocalRepo\SE-Repository\obj\Debug\SE-Lib.dll
+C:\Runes\LocalRepo\SE-Repository\obj\Debug\SE-Lib.pdb
